@@ -13,12 +13,10 @@ const experience = ref<Experience>(new ExperienceDto('', '', '', ''));
 const technology = ref<Technology>(new TechnologyDto('', '', '', ''));
 
 let authenticationToken: string | null = '';
-let apiHost: string = '';
 
 onMounted(() => {
-	apiHost = window.location.hostname === 'localhost' ? 'http://localhost:8080' : 'https://api.churrer.xyz';
 	authenticationToken = localStorage.getItem('token');
-	$fetch<Technology[]>(`${apiHost}/api/technology`, {
+	$fetch<Technology[]>('/api/technology', {
 		method: 'GET',
 		headers: {
 			'Accept': 'application/json',
@@ -26,7 +24,7 @@ onMounted(() => {
 	}).then((data: Technology[]) => {
 		technologies.value = data;
 	});
-	$fetch<Experience[]>(`${apiHost}/api/experience`, {
+	$fetch<Experience[]>('/api/experience', {
 		method: 'GET',
 		headers: {
 			'Accept': 'application/json',
@@ -37,7 +35,7 @@ onMounted(() => {
 });
 
 const saveExperience = function () {
-	$fetch(`${apiHost}/api/experience`, {
+	$fetch('/api/experience', {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
@@ -49,7 +47,7 @@ const saveExperience = function () {
 }
 
 const saveTechnology = function () {
-	$fetch(`${apiHost}/api/technology`, {
+	$fetch('/api/technology', {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
@@ -61,7 +59,7 @@ const saveTechnology = function () {
 }
 
 const deleteTechnology = function (id: number) {
-	$fetch(`${apiHost}/api/technology/${id}`, {
+	$fetch(`/api/technology/${id}`, {
 		method: 'DELETE',
 		headers: {
 			'Authorization': `Basic ${authenticationToken}`
@@ -70,7 +68,7 @@ const deleteTechnology = function (id: number) {
 }
 
 const deleteExperience = function (id: number) {
-	$fetch(`${apiHost}/api/experience/${id}`, {
+	$fetch(`/api/experience/${id}`, {
 		method: 'DELETE',
 		headers: {
 			'Authorization': `Basic ${authenticationToken}`
@@ -81,7 +79,7 @@ const deleteExperience = function (id: number) {
 
 <template>
 	<h1 class="text-2xl">Welcome to the admin page</h1>
-	<Table :data="technologies" :tableTitle="'Technologies'">
+	<Table :data="technologies" :tableTitle="'TechnologySection'">
 		<template #table-header>
 			<th>Name</th>
 			<th>Experience</th>
@@ -97,7 +95,7 @@ const deleteExperience = function (id: number) {
 			<td><button class="btn btn-error rounded" v-on:click="deleteTechnology(item.id)">Delete</button></td>
 		</template>
 	</Table>
-	<Table :data="experiences" :tableTitle="'Experiences'">
+	<Table :data="experiences" :tableTitle="'Experience'">
 		<template #table-header>
 			<th>Company</th>
 			<th>Position</th>

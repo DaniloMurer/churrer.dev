@@ -1,9 +1,7 @@
 <script setup lang="ts">
 const showTelemetryAlert = ref(false)
 
-let apiHost: string = '';
 onMounted(async () => {
-	apiHost = window.location.hostname === 'localhost' ? 'http://localhost:8080' : 'https://api.churrer.xyz';
 	const hasMetricsPolicySet = localStorage.getItem('metricsPolicy');
 	showTelemetryAlert.value = !hasMetricsPolicySet;
 	console.log(typeof hasMetricsPolicySet);
@@ -34,7 +32,7 @@ const setMetricsPolicy = function (metricsPolicy: boolean): void {
  */
 const sendMetricsData = function () {
 	$fetch('https://hutils.loxal.net/whois').then((whois: any) => {
-		$fetch(`${apiHost}/api/telemetry`, {
+		$fetch(`/api/telemetry`, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
@@ -55,11 +53,11 @@ const sendMetricsData = function () {
 </script>
 <template>
 	<div class="flex flex-col items-center gap-16">
-		<Hero />
+		<profile-card />
 		<div class="divider">Technologies</div>
-		<Technologies />
+		<technology-section />
 		<div class="divider">Experience</div>
-		<Experiences />
+		<experience-section />
 	</div>
 	<div role="alert" class="alert fixed bottom-0 left-0 w-2/6 h-56 m-5" v-if="showTelemetryAlert">
 		<span class="iconify carbon--information text-2xl"></span>
