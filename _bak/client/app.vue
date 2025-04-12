@@ -58,7 +58,7 @@ onMounted(() => {
 	<div class="p-3 flex flex-col h-lvh gap-16">
 		<div class="navbar bg-base-300 rounded-2xl shadow-2xl">
 			<div class="flex-1">
-				<NuxtLink class="btn btn-ghost text-xl" to="/">churrer.xyz</NuxtLink>
+				<NuxtLink class="btn btn-ghost text-xl" to="/_bak/client/public">churrer.xyz</NuxtLink>
 				<NuxtLink class="btn btn-ghost text-xl" to="/about">about this site</NuxtLink>
 			</div>
 			<div class="flex-none p-5">
