@@ -1,7 +1,9 @@
 package main
 
 import (
+	"github.com/DaniloMurer/churrer.xyz/internal/api/authentication"
 	"github.com/DaniloMurer/churrer.xyz/internal/api/experience"
+	"github.com/DaniloMurer/churrer.xyz/internal/api/middleware"
 	"github.com/DaniloMurer/churrer.xyz/internal/api/technology"
 	"github.com/DaniloMurer/churrer.xyz/internal/api/telemetry"
 	"github.com/DaniloMurer/churrer.xyz/internal/database"
@@ -18,14 +20,16 @@ func createApp() *fiber.App {
 	api.Post("/telemetry", telemetryapi.CreateTelemetry)
 
 	api.Get("/experience", experienceapi.GetExperiences)
-	api.Post("/experience", experienceapi.CreateExperience)
-	api.Put("/experience", experienceapi.UpdateExperience)
-	api.Delete("/experience/:id", experienceapi.DeleteExperience)
+	api.Post("/experience", middleware.Protected(), experienceapi.CreateExperience)
+	api.Put("/experience", middleware.Protected(), experienceapi.UpdateExperience)
+	api.Delete("/experience/:id", middleware.Protected(), experienceapi.DeleteExperience)
 
 	api.Get("/technology", technologyapi.GetTechnologies)
-	api.Post("/technology", technologyapi.CreateTechnology)
-	api.Put("/technology", technologyapi.UpdateTechnology)
-	api.Delete("/technology/:id", technologyapi.DeleteTechnology)
+	api.Post("/technology", middleware.Protected(), technologyapi.CreateTechnology)
+	api.Put("/technology", middleware.Protected(), technologyapi.UpdateTechnology)
+	api.Delete("/technology/:id", middleware.Protected(), technologyapi.DeleteTechnology)
+
+	api.Post("/authentication", authenticationapi.AuthenticateUser)
 
 	return app
 }

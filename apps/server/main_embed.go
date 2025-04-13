@@ -12,7 +12,7 @@ import (
 	"server/database"
 )
 
-//go:embed spa spa/_nuxt
+//go:embed ../../_bak/server/spa spa/_nuxt
 var spaFs embed.FS
 
 // getSpa loads the embedded filesystem from memory
