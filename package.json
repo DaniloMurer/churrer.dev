@@ -1,0 +1,12 @@
+{
+	"name": "churrer.xyz",
+	"version": "1.0.0",
+	"private": true,
+	"workspaces": [
+		"apps/client/"
+	],
+	"repository": "https://github.com/DaniloMurer/churrer.xyz.git",
+	"author": "Danilo Jakob <danilojakob@protonmail.com>",
+	"license": "MIT",
+	"packageManager": "yarn@4.5.1"
+}

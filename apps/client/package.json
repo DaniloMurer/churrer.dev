@@ -1,0 +1,35 @@
+{
+  "name": "client",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxtjs/i18n": "^9.5.3",
+    "@pinia/nuxt": "^0.11.0",
+    "nuxt": "^3.16.2",
+    "pinia": "^3.0.1",
+    "typescript-eslint": "^8.29.1",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.23.0",
+    "@hey-api/openapi-ts": "^0.64.13",
+    "@types/eslint": "^9.6.1",
+    "@types/node": "^22.14.1",
+    "@typescript-eslint/eslint-plugin": "^8.27.0",
+    "@typescript-eslint/parser": "^8.27.0",
+    "eslint": "^9.23.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "eslint-plugin-vue": "^10.0.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2",
+    "vue-eslint-parser": "^10.1.1"
+  }
+}
