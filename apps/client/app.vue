@@ -4,7 +4,7 @@
   document.documentElement.classList.add('dark');
 </script>
 <template>
-  <div>
+  <div class="size-full">
     <ui-navigation-menu class="p-5">
       <ui-navigation-menu-list>
         <ui-navigation-menu-item>
@@ -22,7 +22,7 @@
       </ui-navigation-menu-list>
     </ui-navigation-menu>
     <NuxtRouteAnnouncer />
-    <div class="p-9">
+    <div class="p-9 h-full">
       <NuxtPage />
     </div>
   </div>

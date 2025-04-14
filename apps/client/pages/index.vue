@@ -1,13 +1,20 @@
 <script setup lang="ts"></script>
 <template>
   <div
-    class="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg"
+    class="relative flex w-full flex-col items-center justify-center overflow-hidden rounded-lg h-full"
   >
     <span
       class="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10"
     >
     </span>
-    <ui-particles-bg class="absolute inset-0" :quantity="100" :ease="100" :staticity="10" refresh />
+    <ui-particles-bg
+      class-name="size-full"
+      class="absolute inset-0"
+      :quantity="500"
+      :ease="100"
+      :staticity="20"
+      refresh
+    />
     <ui-card-container>
       <ui-card-body
         class="group/card relative size-auto rounded-xl border border-black/[0.1] p-6 sm:w-[30rem] dark:border-white/[0.2] bg-background"

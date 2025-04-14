@@ -1,6 +1,6 @@
 <template>
   <div ref="canvasContainerRef" :class="$props.class" aria-hidden="true">
-    <canvas ref="canvasRef"></canvas>
+    <canvas ref="canvasRef" :class="$props.className"></canvas>
   </div>
 </template>
 
@@ -27,6 +27,7 @@
     staticity?: number;
     ease?: number;
     class?: string;
+    className?: string;
   };
 
   const props = withDefaults(defineProps<Props>(), {
@@ -35,6 +36,7 @@
     staticity: 50,
     ease: 50,
     class: '',
+    className: '',
   });
 
   const canvasRef = ref<HTMLCanvasElement | null>(null);
