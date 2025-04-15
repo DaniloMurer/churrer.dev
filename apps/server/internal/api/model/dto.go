@@ -69,3 +69,7 @@ type UserDto struct {
 func (dto *UserDto) CreateToken() {
 	dto.Token = base64.StdEncoding.EncodeToString([]byte(dto.Username + ":" + dto.Password))
 }
+
+type ResponseDto struct {
+	Message string `json:"message"`
+}

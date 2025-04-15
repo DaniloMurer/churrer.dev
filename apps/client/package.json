@@ -7,9 +7,11 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "generate:client": "openapi-ts"
   },
   "dependencies": {
+    "@hey-api/client-fetch": "^0.10.0",
     "@nuxtjs/i18n": "^9.5.3",
     "@pinia/nuxt": "^0.11.0",
     "@tailwindcss/vite": "^4.1.3",

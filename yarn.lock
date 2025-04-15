@@ -639,6 +639,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@hey-api/client-fetch@npm:^0.10.0":
+  version: 0.10.0
+  resolution: "@hey-api/client-fetch@npm:0.10.0"
+  peerDependencies:
+    "@hey-api/openapi-ts": < 2
+  checksum: 10c0/57fee58375f92599a4c4d439466225318a40ce0318059058a25eb9956d351f328987dde6f6dea548396e8e176be59c6c8c8fe77b5400de017f1b8433604972b1
+  languageName: node
+  linkType: hard
+
 "@hey-api/json-schema-ref-parser@npm:1.0.3":
   version: 1.0.3
   resolution: "@hey-api/json-schema-ref-parser@npm:1.0.3"
@@ -3243,6 +3252,7 @@ __metadata:
   resolution: "client@workspace:apps/client"
   dependencies:
     "@eslint/js": "npm:^9.23.0"
+    "@hey-api/client-fetch": "npm:^0.10.0"
     "@hey-api/openapi-ts": "npm:^0.64.13"
     "@nuxtjs/i18n": "npm:^9.5.3"
     "@pinia/nuxt": "npm:^0.11.0"
@@ -7438,6 +7448,12 @@ __metadata:
   checksum: 10c0/30e2ed1dbff1984836cfd0c65abf5d3f3f83bcd696c99d2d3c97edbd4e2a3ff4d3f87108a7d713640d290a7b6fe6c15ddcbc61165ab2eaad48ea8d3b52c7f913
   languageName: node
   linkType: hard
+
+"server@workspace:apps/server":
+  version: 0.0.0-use.local
+  resolution: "server@workspace:apps/server"
+  languageName: unknown
+  linkType: soft
 
 "setprototypeof@npm:1.2.0":
   version: 1.2.0

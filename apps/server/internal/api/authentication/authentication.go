@@ -15,6 +15,16 @@ const (
 
 var logger = log.New(os.Stdout, "[XYZ] - ", log.LstdFlags|log.Lmicroseconds|log.Lshortfile)
 
+// AuthenticateUser godoc
+// @Summary Authenticate user
+// @Description Authenticate user
+// @Tags user
+// @Accept json
+// @Produce json
+// @Param user body dto.UserDto true "User"
+// @Success 201 {object} dto.UserDto "User with token"
+// @Failure 500 "Internal Server Error"
+// @Router /api/authentication [post]
 func AuthenticateUser(c *fiber.Ctx) error {
 	var user dto.UserDto
 	if err := c.BodyParser(&user); err != nil {
