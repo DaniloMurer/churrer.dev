@@ -1,5 +1,5 @@
 definitions:
-  dto.ExperienceDto:
+  ExperienceDto:
     properties:
       company:
         type: string
@@ -10,12 +10,12 @@ definitions:
       timeFrame:
         type: string
     type: object
-  dto.ResponseDto:
+  ResponseDto:
     properties:
       message:
         type: string
     type: object
-  dto.TechnologyDto:
+  TechnologyDto:
     properties:
       description:
         type: string
@@ -26,7 +26,7 @@ definitions:
       name:
         type: string
     type: object
-  dto.TelemetryDto:
+  TelemetryDto:
     properties:
       countryIso:
         type: string
@@ -35,7 +35,7 @@ definitions:
       timestamp:
         type: string
     type: object
-  dto.UserDto:
+  UserDto:
     properties:
       password:
         type: string
@@ -58,14 +58,14 @@ paths:
         name: user
         required: true
         schema:
-          $ref: '#/definitions/dto.UserDto'
+          $ref: '#/definitions/UserDto'
       produces:
       - application/json
       responses:
         "201":
           description: User with token
           schema:
-            $ref: '#/definitions/dto.UserDto'
+            $ref: '#/definitions/UserDto'
         "500":
           description: Internal Server Error
       summary: Authenticate user
@@ -93,7 +93,7 @@ paths:
         "200":
           description: Success message
           schema:
-            $ref: '#/definitions/dto.ResponseDto'
+            $ref: '#/definitions/ResponseDto'
         "500":
           description: Internal Server Error
       summary: Delete experiences
@@ -110,7 +110,7 @@ paths:
           description: Experiences
           schema:
             items:
-              $ref: '#/definitions/dto.ExperienceDto'
+              $ref: '#/definitions/ExperienceDto'
             type: array
         "500":
           description: Internal Server Error
@@ -127,7 +127,7 @@ paths:
         name: user
         required: true
         schema:
-          $ref: '#/definitions/dto.UserDto'
+          $ref: '#/definitions/UserDto'
       - description: BasicAuth token
         in: header
         name: Authorization
@@ -139,7 +139,7 @@ paths:
         "201":
           description: Created experience
           schema:
-            $ref: '#/definitions/dto.ExperienceDto'
+            $ref: '#/definitions/ExperienceDto'
         "500":
           description: Internal Server Error
       summary: Create experience
@@ -155,7 +155,7 @@ paths:
         name: user
         required: true
         schema:
-          $ref: '#/definitions/dto.ExperienceDto'
+          $ref: '#/definitions/ExperienceDto'
       - description: BasicAuth token
         in: header
         name: Authorization
@@ -167,7 +167,7 @@ paths:
         "200":
           description: Updated experience
           schema:
-            $ref: '#/definitions/dto.ExperienceDto'
+            $ref: '#/definitions/ExperienceDto'
         "500":
           description: Internal Server Error
       summary: Update experiences
@@ -195,7 +195,7 @@ paths:
         "200":
           description: Success message
           schema:
-            $ref: '#/definitions/dto.ResponseDto'
+            $ref: '#/definitions/ResponseDto'
         "500":
           description: Internal Server Error
       summary: Delete technology
@@ -212,7 +212,7 @@ paths:
           description: Technologies
           schema:
             items:
-              $ref: '#/definitions/dto.TechnologyDto'
+              $ref: '#/definitions/TechnologyDto'
             type: array
         "500":
           description: Internal Server Error
@@ -229,7 +229,7 @@ paths:
         name: technology
         required: true
         schema:
-          $ref: '#/definitions/dto.TechnologyDto'
+          $ref: '#/definitions/TechnologyDto'
       - description: BasicAuth token
         in: header
         name: Authorization
@@ -241,7 +241,7 @@ paths:
         "201":
           description: Created technology
           schema:
-            $ref: '#/definitions/dto.TechnologyDto'
+            $ref: '#/definitions/TechnologyDto'
         "500":
           description: Internal Server Error
       summary: Create technology
@@ -257,7 +257,7 @@ paths:
         name: technology
         required: true
         schema:
-          $ref: '#/definitions/dto.TechnologyDto'
+          $ref: '#/definitions/TechnologyDto'
       - description: BasicAuth token
         in: header
         name: Authorization
@@ -269,7 +269,7 @@ paths:
         "200":
           description: Updated technology
           schema:
-            $ref: '#/definitions/dto.TechnologyDto'
+            $ref: '#/definitions/TechnologyDto'
         "500":
           description: Internal Server Error
       summary: Update technology
@@ -287,7 +287,7 @@ paths:
           description: Telemetries
           schema:
             items:
-              $ref: '#/definitions/dto.TelemetryDto'
+              $ref: '#/definitions/TelemetryDto'
             type: array
         "500":
           description: Internal Server Error
@@ -304,14 +304,14 @@ paths:
         name: user
         required: true
         schema:
-          $ref: '#/definitions/dto.TelemetryDto'
+          $ref: '#/definitions/TelemetryDto'
       produces:
       - application/json
       responses:
         "201":
           description: Created telemetry
           schema:
-            $ref: '#/definitions/dto.ExperienceDto'
+            $ref: '#/definitions/ExperienceDto'
         "500":
           description: Internal Server Error
       summary: Create telemetry

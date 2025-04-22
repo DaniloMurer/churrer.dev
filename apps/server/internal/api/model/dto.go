@@ -11,7 +11,7 @@ type TelemetryDto struct {
 	CountryName string    `json:"countryName"`
 	CountryISO  string    `json:"countryIso"`
 	TimeStamp   time.Time `json:"timestamp"`
-}
+} //@name TelemetryDto
 
 // ToTelemetry converts a TelemetryDto model to a Telemetry database model
 func (dto TelemetryDto) ToTelemetry() *entities.Telemetry {
@@ -28,7 +28,7 @@ type ExperienceDto struct {
 	Position         string `json:"position"`
 	TimeFrame        string `json:"timeFrame"`
 	Responsibilities string `json:"responsibilities"`
-}
+} //@name ExperienceDto
 
 // ToExperience converts an ExperienceDto model to an Experience database model
 func (dto ExperienceDto) ToExperience() *entities.Experience {
@@ -46,7 +46,7 @@ type TechnologyDto struct {
 	Experience  string `json:"experience"`
 	Description string `json:"description"`
 	LogoClass   string `json:"logoClass"`
-}
+} //@name TechnologyDto
 
 // ToTechnology converts an TechnologyDto model to a Technology database model
 func (dto TechnologyDto) ToTechnology() *entities.Technology {
@@ -63,7 +63,7 @@ type UserDto struct {
 	Username string `json:"username"`
 	Password string `json:"password"`
 	Token    string `json:"token"`
-}
+} //@name UserDto
 
 // CreateToken generates an authentication token by encoding the username and password and fills the Token field
 func (dto *UserDto) CreateToken() {
@@ -72,4 +72,4 @@ func (dto *UserDto) CreateToken() {
 
 type ResponseDto struct {
 	Message string `json:"message"`
-}
+} //@name ResponseDto

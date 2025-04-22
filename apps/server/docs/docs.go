@@ -35,7 +35,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/dto.UserDto"
+                            "$ref": "#/definitions/UserDto"
                         }
                     }
                 ],
@@ -43,7 +43,7 @@ const docTemplate = `{
                     "201": {
                         "description": "User with token",
                         "schema": {
-                            "$ref": "#/definitions/dto.UserDto"
+                            "$ref": "#/definitions/UserDto"
                         }
                     },
                     "500": {
@@ -71,7 +71,7 @@ const docTemplate = `{
                         "schema": {
                             "type": "array",
                             "items": {
-                                "$ref": "#/definitions/dto.ExperienceDto"
+                                "$ref": "#/definitions/ExperienceDto"
                             }
                         }
                     },
@@ -99,7 +99,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/dto.ExperienceDto"
+                            "$ref": "#/definitions/ExperienceDto"
                         }
                     },
                     {
@@ -114,7 +114,7 @@ const docTemplate = `{
                     "200": {
                         "description": "Updated experience",
                         "schema": {
-                            "$ref": "#/definitions/dto.ExperienceDto"
+                            "$ref": "#/definitions/ExperienceDto"
                         }
                     },
                     "500": {
@@ -141,7 +141,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/dto.UserDto"
+                            "$ref": "#/definitions/UserDto"
                         }
                     },
                     {
@@ -156,7 +156,7 @@ const docTemplate = `{
                     "201": {
                         "description": "Created experience",
                         "schema": {
-                            "$ref": "#/definitions/dto.ExperienceDto"
+                            "$ref": "#/definitions/ExperienceDto"
                         }
                     },
                     "500": {
@@ -196,7 +196,7 @@ const docTemplate = `{
                     "200": {
                         "description": "Success message",
                         "schema": {
-                            "$ref": "#/definitions/dto.ResponseDto"
+                            "$ref": "#/definitions/ResponseDto"
                         }
                     },
                     "500": {
@@ -224,7 +224,7 @@ const docTemplate = `{
                         "schema": {
                             "type": "array",
                             "items": {
-                                "$ref": "#/definitions/dto.TechnologyDto"
+                                "$ref": "#/definitions/TechnologyDto"
                             }
                         }
                     },
@@ -252,7 +252,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/dto.TechnologyDto"
+                            "$ref": "#/definitions/TechnologyDto"
                         }
                     },
                     {
@@ -267,7 +267,7 @@ const docTemplate = `{
                     "200": {
                         "description": "Updated technology",
                         "schema": {
-                            "$ref": "#/definitions/dto.TechnologyDto"
+                            "$ref": "#/definitions/TechnologyDto"
                         }
                     },
                     "500": {
@@ -294,7 +294,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/dto.TechnologyDto"
+                            "$ref": "#/definitions/TechnologyDto"
                         }
                     },
                     {
@@ -309,7 +309,7 @@ const docTemplate = `{
                     "201": {
                         "description": "Created technology",
                         "schema": {
-                            "$ref": "#/definitions/dto.TechnologyDto"
+                            "$ref": "#/definitions/TechnologyDto"
                         }
                     },
                     "500": {
@@ -349,7 +349,7 @@ const docTemplate = `{
                     "200": {
                         "description": "Success message",
                         "schema": {
-                            "$ref": "#/definitions/dto.ResponseDto"
+                            "$ref": "#/definitions/ResponseDto"
                         }
                     },
                     "500": {
@@ -377,7 +377,7 @@ const docTemplate = `{
                         "schema": {
                             "type": "array",
                             "items": {
-                                "$ref": "#/definitions/dto.TelemetryDto"
+                                "$ref": "#/definitions/TelemetryDto"
                             }
                         }
                     },
@@ -405,7 +405,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/dto.TelemetryDto"
+                            "$ref": "#/definitions/TelemetryDto"
                         }
                     }
                 ],
@@ -413,7 +413,7 @@ const docTemplate = `{
                     "201": {
                         "description": "Created telemetry",
                         "schema": {
-                            "$ref": "#/definitions/dto.ExperienceDto"
+                            "$ref": "#/definitions/ExperienceDto"
                         }
                     },
                     "500": {
@@ -424,7 +424,7 @@ const docTemplate = `{
         }
     },
     "definitions": {
-        "dto.ExperienceDto": {
+        "ExperienceDto": {
             "type": "object",
             "properties": {
                 "company": {
@@ -441,7 +441,7 @@ const docTemplate = `{
                 }
             }
         },
-        "dto.ResponseDto": {
+        "ResponseDto": {
             "type": "object",
             "properties": {
                 "message": {
@@ -449,7 +449,7 @@ const docTemplate = `{
                 }
             }
         },
-        "dto.TechnologyDto": {
+        "TechnologyDto": {
             "type": "object",
             "properties": {
                 "description": {
@@ -466,7 +466,7 @@ const docTemplate = `{
                 }
             }
         },
-        "dto.TelemetryDto": {
+        "TelemetryDto": {
             "type": "object",
             "properties": {
                 "countryIso": {
@@ -480,7 +480,7 @@ const docTemplate = `{
                 }
             }
         },
-        "dto.UserDto": {
+        "UserDto": {
             "type": "object",
             "properties": {
                 "password": {
