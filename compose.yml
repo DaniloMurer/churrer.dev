@@ -3,6 +3,16 @@ services:
     build:
       context: .
       dockerfile: apps/client/Containerfile
-    ports:
-      - "5000:80"
+    labels:
+      traefik.enable: true
+
+      traefik.http.routers.churrer-web.rule: Host(`churrer.dev`)
+      traefik.http.routers.churrer-web.entrypoints: websecure
+      traefik.http.routers.churrer-web.tls: true
+      traefik.http.routers.churrer-web.tls.certResolver: letencrypt
+      traefik.http.routers.churrer-web-http.rule: Host(`churrer.dev`)
+      traefik.http.routers.churrer-web-http.entrypoints: web
+      traefik.http.routers.churrer-web-http.middlewares: redirect-to-https
+      traefik.http.middlewares.redirect-to-https.redirectscheme.scheme: https
+      traefik.http.services.churrer-web.loadbalancer.server.port: 3001
     restart: unless-stopped
