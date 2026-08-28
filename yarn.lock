@@ -713,6 +713,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@inspira-ui/plugins@npm:^0.0.2":
+  version: 0.0.2
+  resolution: "@inspira-ui/plugins@npm:0.0.2"
+  dependencies:
+    clsx: "npm:^2.1.1"
+    mini-svg-data-uri: "npm:^1.4.4"
+    tailwind-merge: "npm:^3.5.0"
+  checksum: 10c0/0f78be0ea9cd883ff560a0bee0e8a1a424e831a91bba4d31a07963665e36dac37eaa80ab658c7fac78cec28e302e98c7635ca116d8aa69c79921543f2c51edce
+  languageName: node
+  linkType: hard
+
 "@internationalized/date@npm:^3.5.0":
   version: 3.8.0
   resolution: "@internationalized/date@npm:3.8.0"
@@ -985,6 +996,15 @@ __metadata:
   version: 1.1.1
   resolution: "@kwsites/promise-deferred@npm:1.1.1"
   checksum: 10c0/ef1ad3f1f50991e3bed352b175986d8b4bc684521698514a2ed63c1d1fc9848843da4f2bc2df961c9b148c94e1c34bf33f0da8a90ba2234e452481f2cc9937b1
+  languageName: node
+  linkType: hard
+
+"@lucide/vue@npm:^1.35.0":
+  version: 1.35.0
+  resolution: "@lucide/vue@npm:1.35.0"
+  peerDependencies:
+    vue: ">=3.0.1"
+  checksum: 10c0/89aa39674709f98c03b6c09885223b0a7f3d32e41786d1736759b6d266312dfac31283edf7c1aceb9f6bfd8fa4a82cb2eca7ba95561ba3975dd625a4b931ace9
   languageName: node
   linkType: hard
 
@@ -3254,6 +3274,8 @@ __metadata:
     "@eslint/js": "npm:^9.23.0"
     "@hey-api/client-fetch": "npm:^0.10.0"
     "@hey-api/openapi-ts": "npm:^0.64.13"
+    "@inspira-ui/plugins": "npm:^0.0.2"
+    "@lucide/vue": "npm:^1.35.0"
     "@nuxtjs/i18n": "npm:^9.5.3"
     "@pinia/nuxt": "npm:^0.11.0"
     "@tailwindcss/vite": "npm:^4.1.3"
@@ -3268,7 +3290,9 @@ __metadata:
     eslint-config-prettier: "npm:^10.1.1"
     eslint-plugin-prettier: "npm:^5.2.3"
     eslint-plugin-vue: "npm:^10.0.0"
+    gsap: "npm:^3.15.0"
     lucide-vue-next: "npm:^0.488.0"
+    motion-v: "npm:^2.4.0"
     nuxt: "npm:^3.16.2"
     pinia: "npm:^3.0.1"
     prettier: "npm:^3.5.3"
@@ -3280,6 +3304,7 @@ __metadata:
     typescript: "npm:^5.8.2"
     typescript-eslint: "npm:^8.29.1"
     vue-eslint-parser: "npm:^10.1.1"
+    vue-use-spring: "npm:^0.3.3"
     zod: "npm:^3.24.2"
   languageName: unknown
   linkType: soft
@@ -4500,6 +4525,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"framer-motion@npm:^13.1.0":
+  version: 13.1.1
+  resolution: "framer-motion@npm:13.1.1"
+  dependencies:
+    motion-dom: "npm:^13.1.1"
+    motion-utils: "npm:^13.0.0"
+    tslib: "npm:^2.4.0"
+  peerDependencies:
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+  peerDependenciesMeta:
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: 10c0/db1601442047bbd06286ef9fd5c9af06b4530984dc0cd0f77dffa8590a8dbcac92db05e992b62041455b55db6791bdfba8cd7c0aaa920a2325eba2c277fb7baa
+  languageName: node
+  linkType: hard
+
 "fresh@npm:^2.0.0":
   version: 2.0.0
   resolution: "fresh@npm:2.0.0"
@@ -4723,6 +4767,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"gsap@npm:^3.15.0":
+  version: 3.15.0
+  resolution: "gsap@npm:3.15.0"
+  checksum: 10c0/5d86de72cb0bd6b20502c34c329a83a7d679979731bb465164407b7a5225aa61d612beee740eea36258622897c116cd2ca35320d530b7cf68bad62522361fcf7
+  languageName: node
+  linkType: hard
+
 "gzip-size@npm:^7.0.0":
   version: 7.0.0
   resolution: "gzip-size@npm:7.0.0"
@@ -4780,6 +4831,13 @@ __metadata:
   dependencies:
     function-bind: "npm:^1.1.2"
   checksum: 10c0/3769d434703b8ac66b209a4cca0737519925bbdb61dd887f93a16372b14694c63ff4e797686d87c90f08168e81082248b9b028bad60d4da9e0d1148766f56eb9
+  languageName: node
+  linkType: hard
+
+"hey-listen@npm:^1.0.8":
+  version: 1.0.8
+  resolution: "hey-listen@npm:1.0.8"
+  checksum: 10c0/38db3028b4756f3d536c0f6a92da53bad577ab649b06dddfd0a4d953f9a46bbc6a7f693c8c5b466a538d6d23dbc469260c848427f0de14198a2bbecbac37b39e
   languageName: node
   linkType: hard
 
@@ -5676,6 +5734,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mini-svg-data-uri@npm:^1.4.4":
+  version: 1.4.4
+  resolution: "mini-svg-data-uri@npm:1.4.4"
+  bin:
+    mini-svg-data-uri: cli.js
+  checksum: 10c0/24545fa30b5a45449241bf19c25b8bc37594b63ec06401b3d563bd1c2e8a6abb7c18741f8b354e0064baa63c291be214154bf3a66f201ae71dfab3cc1a5e3191
+  languageName: node
+  linkType: hard
+
 "minimatch@npm:^3.1.2":
   version: 3.1.2
   resolution: "minimatch@npm:3.1.2"
@@ -5844,6 +5911,37 @@ __metadata:
   version: 0.1.1
   resolution: "mocked-exports@npm:0.1.1"
   checksum: 10c0/14b0a424f20ad64f49bb36f3068640fb2dbe2f702e9d775ab278636381c09db62bc7ba88ff3874edb8eefb4c1b40c38a6aade5afe80bd34009cc563a0a573c60
+  languageName: node
+  linkType: hard
+
+"motion-dom@npm:^13.0.0, motion-dom@npm:^13.1.1":
+  version: 13.1.1
+  resolution: "motion-dom@npm:13.1.1"
+  dependencies:
+    motion-utils: "npm:^13.0.0"
+  checksum: 10c0/c7697e6937920f9f584c04d59fe8589e7bbca18a85d2cf1ec7cf4ee229fb29054dda41bec6db2dde4fdf43436f17cfc2a3bbab06d2d9f8232dfa7921e0382d20
+  languageName: node
+  linkType: hard
+
+"motion-utils@npm:^13.0.0":
+  version: 13.0.0
+  resolution: "motion-utils@npm:13.0.0"
+  checksum: 10c0/4b279ce85f71926d668ff5966feb898b174541d16952a61c7150982388553266602ecd2a76e057530076ff8f38d06672e585639ddc73c41dd1a67d04aaa3662d
+  languageName: node
+  linkType: hard
+
+"motion-v@npm:^2.4.0":
+  version: 2.4.0
+  resolution: "motion-v@npm:2.4.0"
+  dependencies:
+    framer-motion: "npm:^13.1.0"
+    hey-listen: "npm:^1.0.8"
+    motion-dom: "npm:^13.0.0"
+    motion-utils: "npm:^13.0.0"
+  peerDependencies:
+    "@vueuse/core": ">=10.0.0"
+    vue: ">=3.0.0"
+  checksum: 10c0/d099abc8ac94557541966a6a0a00d7def11cd19345cc88c2d0b0b0114a9b4b66f6ec28942efec1cf14b598913959793382f4cdf44050be04fb086b750528a449
   languageName: node
   linkType: hard
 
@@ -7449,12 +7547,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"server@workspace:apps/server":
-  version: 0.0.0-use.local
-  resolution: "server@workspace:apps/server"
-  languageName: unknown
-  linkType: soft
-
 "setprototypeof@npm:1.2.0":
   version: 1.2.0
   resolution: "setprototypeof@npm:1.2.0"
@@ -7833,6 +7925,13 @@ __metadata:
   version: 3.2.0
   resolution: "tailwind-merge@npm:3.2.0"
   checksum: 10c0/294f6c2db0df74405bff126107107426c3126a70a1717d78e8d6811db65546c9bb3d61282bdb8d9fbded23f6bc8ec3e8e61031a4f53265f90b7f3dba558f88f4
+  languageName: node
+  linkType: hard
+
+"tailwind-merge@npm:^3.5.0":
+  version: 3.6.0
+  resolution: "tailwind-merge@npm:3.6.0"
+  checksum: 10c0/a728d929f4786bcb48641db4228cc8c006a7545491783a658fb4d24d177dab960620991d17805a047309228de50ab949ca8d9e112c30183da0432367796ae186
   languageName: node
   linkType: hard
 
@@ -8621,7 +8720,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue-demi@npm:>=0.13.0":
+"vue-demi@npm:>=0.13.0, vue-demi@npm:latest":
   version: 0.14.10
   resolution: "vue-demi@npm:0.14.10"
   peerDependencies:
@@ -8682,6 +8781,21 @@ __metadata:
   peerDependencies:
     vue: ^3.2.0
   checksum: 10c0/5521c8d0ab7634ea75118824d4b4cae3748964725b3d3b4064eb3dbd44013381ea3163d4d856af61655936cd897b84f8eeebb312d0668532c3074d53814bd953
+  languageName: node
+  linkType: hard
+
+"vue-use-spring@npm:^0.3.3":
+  version: 0.3.3
+  resolution: "vue-use-spring@npm:0.3.3"
+  dependencies:
+    vue-demi: "npm:latest"
+  peerDependencies:
+    "@vue/composition-api": ^1.4.0
+    vue: ^2.6.12 || ^3.0.0
+  peerDependenciesMeta:
+    "@vue/composition-api":
+      optional: true
+  checksum: 10c0/aeae719bfd3099c2159dc7ed3f3bd7b3975b64be59d8138b0083f9d68dc050d3d0aeda38a383ad233d7fb4884b14f7a86ce4291c826cd4a4b51085064ec738f4
   languageName: node
   linkType: hard
 
