@@ -1,22 +1,15 @@
 <script setup lang="ts">
-  import { cn } from '@/lib/utils';
-  import {
-    BentoGrid,
-    BentoGridCard,
-    BentoGridItem,
-  } from '@/components/ui/bento-grid';
-  import { Marquee } from '@/components/ui/marquee';
-  import { Meteors } from '@/components/ui/meteors';
-  import { CardContainer, CardBody, CardItem } from '@/components/ui/card-3d';
-  import { ParticlesBg } from '@/components/ui/particles-bg';
-  import { Button } from '@/components/ui/button';
-  import { IconCloud } from '@/components/ui/icon-cloud';
-  import { Dock, DockIcon } from '@/components/ui/dock';
-  import { Timeline } from '@/components/ui/timeline';
-  import { BorderBeam } from '@/components/ui/border-beam';
-  import { Github, Mail, Linkedin, Server, Layout, Cloud, Database, ExternalLink } from 'lucide-vue-next';
+import {BentoGrid, BentoGridItem,} from '@/components/ui/bento-grid';
+import {CardBody, CardContainer, CardItem} from '@/components/ui/card-3d';
+import {ParticlesBg} from '@/components/ui/particles-bg';
+import {Button} from '@/components/ui/button';
+import {IconCloud} from '@/components/ui/icon-cloud';
+import {Dock, DockIcon} from '@/components/ui/dock';
+import {Timeline} from '@/components/ui/timeline';
+import {BorderBeam} from '@/components/ui/border-beam';
+import {Cloud, Database, ExternalLink, Github, Layout, Linkedin, Mail, Server} from 'lucide-vue-next';
 
-  const experience = [
+const experience = [
     {
       company: 'Würth IT Switzerland AG',
       position: 'Software Engineer',
