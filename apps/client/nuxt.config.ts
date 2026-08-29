@@ -16,11 +16,15 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-        { rel: 'canonical', href: 'https://churrer.dev/' }
+        { rel: 'canonical', href: 'https://me.churrer.dev/' }
       ]
     }
   },
-  modules: ['@pinia/nuxt', '@nuxtjs/i18n', 'shadcn-nuxt'],
+  site: {
+	url: 'https://me.churrer.dev',
+    name: 'Danilo Jakob'
+  },
+  modules: ['@nuxtjs/sitemap', '@pinia/nuxt', '@nuxtjs/i18n', 'shadcn-nuxt'],
   css: ['~/assets/css/tailwind.css'],
   vite: {
     plugins: [tailwindcss()],
