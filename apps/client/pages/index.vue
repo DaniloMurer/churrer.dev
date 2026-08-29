@@ -105,6 +105,14 @@
       tech: ['C', 'Raylib', 'Physics', 'Orbital Mechanics'],
       color: 'purple',
     },
+    {
+      title: 'churrer.dev',
+      description:
+        'The source code of this very portfolio website. A modern, interactive developer profile built with Inspira UI and Nuxt 3.',
+      link: 'https://github.com/DaniloMurer/churrer.dev',
+      tech: ['Vue', 'Nuxt', 'Inspira UI', 'Tailwind CSS'],
+      color: 'green',
+    },
   ];
 </script>
 <template>
@@ -193,12 +201,18 @@
             v-for="project in featuredProjects"
             :key="project.title"
             class="group relative overflow-hidden"
-            :class="project.title === 'churrers-cluster' ? 'md:col-span-2' : 'md:col-span-1'"
+            :class="
+              project.title === 'churrers-cluster' ? 'md:col-span-2' : 'md:col-span-1'
+            "
           >
             <template #title>
               <div
                 class="flex items-center gap-2"
-                :class="project.color === 'blue' ? 'text-blue-500' : 'text-purple-500'"
+                :class="{
+                  'text-blue-500': project.color === 'blue',
+                  'text-purple-500': project.color === 'purple',
+                  'text-green-500': project.color === 'green',
+                }"
               >
                 <Github class="size-6" />
                 <h3 class="text-xl font-bold">{{ project.title }}</h3>
@@ -214,11 +228,13 @@
                     v-for="t in project.tech"
                     :key="t"
                     class="px-2 py-1 rounded-md text-xs font-medium border"
-                    :class="
-                      project.color === 'blue'
-                        ? 'bg-blue-500/10 text-blue-500 border-blue-500/20'
-                        : 'bg-purple-500/10 text-purple-500 border-purple-500/20'
-                    "
+                    :class="{
+                      'bg-blue-500/10 text-blue-500 border-blue-500/20': project.color === 'blue',
+                      'bg-purple-500/10 text-purple-500 border-purple-500/20':
+                        project.color === 'purple',
+                      'bg-green-500/10 text-green-500 border-green-500/20':
+                        project.color === 'green',
+                    }"
                   >
                     {{ t }}
                   </span>
@@ -238,8 +254,20 @@
             <BorderBeam
               :size="150"
               :duration="15"
-              :color-from="project.color === 'blue' ? '#3b82f6' : '#a855f7'"
-              :color-to="project.color === 'blue' ? '#60a5fa' : '#d8b4fe'"
+              :color-from="
+                project.color === 'blue'
+                  ? '#3b82f6'
+                  : project.color === 'purple'
+                    ? '#a855f7'
+                    : '#22c55e'
+              "
+              :color-to="
+                project.color === 'blue'
+                  ? '#60a5fa'
+                  : project.color === 'purple'
+                    ? '#d8b4fe'
+                    : '#86efac'
+              "
             />
           </BentoGridItem>
         </BentoGrid>
