@@ -107,7 +107,7 @@ const experience = [
     {
       title: 'churrer.dev',
       description:
-        'The source code of this very portfolio website. A modern, interactive developer profile built with Inspira UI and Nuxt 4.',
+        'The source code of this very portfolio website. A modern, interactive developer profile built with Inspira UI and Nuxt 3.',
       link: 'https://github.com/DaniloMurer/churrer.dev',
       tech: ['Vue', 'Nuxt', 'Inspira UI', 'Tailwind CSS'],
       color: 'green',
@@ -184,7 +184,7 @@ const experience = [
           </CardItem>
           <CardItem :translate-z="100" class="mt-6 w-full">
             <div
-              class="h-64 w-full rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex flex-col items-center justify-center text-white text-sm px-8 text-center leading-relaxed"
+              class="h-auto min-h-64 w-full rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex flex-col items-center justify-center text-white text-sm px-4 py-8 sm:px-8 text-center leading-relaxed"
             >
               <div class="mb-4 px-3 py-1 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-[10px] uppercase tracking-widest font-bold">
                 Relocation Goal: Helsinki 2027 🇫🇮
@@ -233,7 +233,7 @@ const experience = [
       <!-- Featured Projects -->
       <section>
         <h2 class="text-3xl font-bold mb-10 text-center">Featured Projects</h2>
-        <BentoGrid class="max-w-4xl mx-auto">
+        <BentoGrid class="max-w-4xl mx-auto px-0 sm:px-4">
           <BentoGridItem
             v-for="project in featuredProjects"
             :key="project.title"
@@ -345,7 +345,7 @@ const experience = [
       <!-- Core Competencies -->
       <section>
         <h2 class="text-3xl font-bold mb-10 text-center">Core Competencies</h2>
-        <BentoGrid class="max-w-4xl mx-auto">
+        <BentoGrid class="max-w-4xl mx-auto px-0 sm:px-4">
           <!-- Backend -->
           <BentoGridItem class="md:col-span-2 group relative overflow-hidden">
             <template #title>

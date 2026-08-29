@@ -77,12 +77,14 @@ watch(height, (newHeight) => {
             />
           </div>
           <h3
-            class="hidden text-xl font-bold text-neutral-500 md:block md:pl-20 md:text-5xl dark:text-neutral-500"
+            class="text-xl font-bold text-neutral-500 pl-16 md:pl-20 md:text-5xl dark:text-neutral-500"
           >
             {{ item.label }}
           </h3>
         </div>
-        <slot :name="item.id" />
+        <div class="relative w-full pl-4 pr-4 md:pl-4">
+          <slot :name="item.id" />
+        </div>
       </div>
       <div
         :style="{
