@@ -37,7 +37,6 @@ const experience = [
     { name: 'Kubernetes', icon: 'i-simple-icons-kubernetes' },
     { name: 'Docker', icon: 'i-simple-icons-docker' },
     { name: 'PostgreSQL', icon: 'i-simple-icons-postgresql' },
-    { name: 'Redis', icon: 'i-simple-icons-redis' },
     { name: 'OpenShift', icon: 'i-simple-icons-redhatopenshift' },
     { name: 'Elasticsearch', icon: 'i-simple-icons-elasticsearch' },
     { name: 'Jenkins', icon: 'i-simple-icons-jenkins' },
@@ -422,7 +421,7 @@ const experience = [
                 </p>
                 <div class="flex flex-wrap gap-2">
                   <span
-                    v-for="s in ['ABAP', 'SAP UI5', 'SAP Gateway', 'PostgreSQL', 'Redis', 'ELK']"
+                    v-for="s in ['ABAP', 'SAP UI5', 'SAP Gateway', 'PostgreSQL', 'ELK']"
                     :key="s"
                     class="px-2 py-1 rounded-md bg-yellow-500/10 text-yellow-500 text-xs font-medium border border-yellow-500/20"
                   >
