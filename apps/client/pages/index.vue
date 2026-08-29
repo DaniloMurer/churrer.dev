@@ -107,6 +107,43 @@ const experience = [
       color: 'green',
     },
   ];
+
+  useSeoMeta({
+    title: 'Danilo Jakob - Full-Stack Software Engineer',
+    ogTitle: 'Danilo Jakob - Full-Stack Software Engineer',
+    description: 'Software Engineer at Würth IT Switzerland AG, specializing in Java, Go, and DevOps. Relocating to Helsinki, Finland in April 2027.',
+    ogDescription: 'Software Engineer at Würth IT Switzerland AG, specializing in Java, Go, and DevOps. Relocating to Helsinki, Finland in April 2027.',
+    twitterCard: 'summary_large_image',
+  });
+
+  useHead({
+    script: [
+      {
+        type: 'application/ld+json',
+        innerHTML: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'Person',
+          name: 'Danilo Jakob',
+          url: 'https://me.churrer.dev',
+          jobTitle: 'Full-Stack Software Engineer',
+          worksFor: {
+            '@type': 'Organization',
+            name: 'Würth IT Switzerland AG',
+          },
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Chur',
+            addressCountry: 'CH',
+          },
+          sameAs: [
+            'https://github.com/DaniloMurer',
+            'https://linkedin.com/in/danilojakob', // Assuming standard LinkedIn URL
+          ],
+          description: 'Software Engineer specializing in Java, Go, and Kubernetes. Relocating to Helsinki, Finland in April 2027.',
+        }),
+      },
+    ],
+  });
 </script>
 <template>
   <div class="relative w-full min-h-screen bg-background overflow-x-hidden text-foreground">
@@ -126,7 +163,7 @@ const experience = [
         <CardBody
           class="group/card relative size-auto rounded-xl border border-black/[0.1] p-6 sm:w-[35rem] dark:border-white/[0.2] bg-background/80 backdrop-blur-sm"
         >
-          <CardItem :translate-z="50" class="text-4xl font-bold text-neutral-800 dark:text-white">
+          <CardItem :translate-z="50" as="h1" class="text-4xl font-bold text-neutral-800 dark:text-white">
             Danilo Jakob
           </CardItem>
           <CardItem
