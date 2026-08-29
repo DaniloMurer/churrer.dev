@@ -14,7 +14,7 @@
   import { Dock, DockIcon } from '@/components/ui/dock';
   import { Timeline } from '@/components/ui/timeline';
   import { BorderBeam } from '@/components/ui/border-beam';
-  import { Github, Mail, Linkedin, Server, Layout, Cloud, Database } from 'lucide-vue-next';
+  import { Github, Mail, Linkedin, Server, Layout, Cloud, Database, ExternalLink } from 'lucide-vue-next';
 
   const experience = [
     {
@@ -87,6 +87,25 @@
   ];
 
   const interests = ['Fishing', 'Writing', 'Gaming'];
+
+  const featuredProjects = [
+    {
+      title: 'churrers-cluster',
+      description:
+        'A comprehensive GitOps-driven Kubernetes cluster setup. Managing infrastructure as code with Kustomize, ArgoCD, and automated deployment pipelines.',
+      link: 'https://github.com/DaniloMurer/churrers-cluster',
+      tech: ['Kubernetes', 'Kustomize', 'ArgoCD', 'GitOps'],
+      color: 'blue',
+    },
+    {
+      title: 'space-simulations',
+      description:
+        'A collection of space-related simulations and visualizations, exploring physics and orbital mechanics in a 2D environment.',
+      link: 'https://github.com/DaniloMurer/space-simulations',
+      tech: ['C', 'Raylib', 'Physics', 'Orbital Mechanics'],
+      color: 'purple',
+    },
+  ];
 </script>
 <template>
   <div class="relative w-full min-h-screen bg-background overflow-x-hidden text-foreground">
@@ -164,6 +183,66 @@
         <div class="relative flex size-full items-center justify-center overflow-hidden">
           <IconCloud :images="skillIcons" />
         </div>
+      </section>
+
+      <!-- Featured Projects -->
+      <section>
+        <h2 class="text-3xl font-bold mb-10 text-center">Featured Projects</h2>
+        <BentoGrid class="max-w-4xl mx-auto">
+          <BentoGridItem
+            v-for="project in featuredProjects"
+            :key="project.title"
+            class="group relative overflow-hidden"
+            :class="project.title === 'churrers-cluster' ? 'md:col-span-2' : 'md:col-span-1'"
+          >
+            <template #title>
+              <div
+                class="flex items-center gap-2"
+                :class="project.color === 'blue' ? 'text-blue-500' : 'text-purple-500'"
+              >
+                <Github class="size-6" />
+                <h3 class="text-xl font-bold">{{ project.title }}</h3>
+              </div>
+            </template>
+            <template #description>
+              <div class="space-y-4">
+                <p class="text-sm">
+                  {{ project.description }}
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    v-for="t in project.tech"
+                    :key="t"
+                    class="px-2 py-1 rounded-md text-xs font-medium border"
+                    :class="
+                      project.color === 'blue'
+                        ? 'bg-blue-500/10 text-blue-500 border-blue-500/20'
+                        : 'bg-purple-500/10 text-purple-500 border-purple-500/20'
+                    "
+                  >
+                    {{ t }}
+                  </span>
+                </div>
+                <div class="pt-2">
+                  <a
+                    :href="project.link"
+                    target="_blank"
+                    class="inline-flex items-center text-xs font-bold hover:underline"
+                  >
+                    View on GitHub
+                    <ExternalLink class="ml-1 size-3" />
+                  </a>
+                </div>
+              </div>
+            </template>
+            <BorderBeam
+              :size="150"
+              :duration="15"
+              :color-from="project.color === 'blue' ? '#3b82f6' : '#a855f7'"
+              :color-to="project.color === 'blue' ? '#60a5fa' : '#d8b4fe'"
+            />
+          </BentoGridItem>
+        </BentoGrid>
       </section>
 
       <!-- Experience Section -->

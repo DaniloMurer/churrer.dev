@@ -6,11 +6,9 @@
     "apps/client"
   ],
   "scripts": {
-    "server": "yarn workspace server",
-    "client": "yarn workspace client",
-    "generate:api": "yarn server generate:openapi && yarn client generate:client"
+    "client": "yarn workspace client"
   },
-  "repository": "https://github.com/DaniloMurer/churrer.xyz.git",
+  "repository": "https://github.com/DaniloMurer/churrer.dev.git",
   "author": "Danilo Jakob <danilojakob@protonmail.com>",
   "license": "MIT",
   "packageManager": "yarn@4.5.1"
