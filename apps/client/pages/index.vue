@@ -133,17 +133,24 @@
               </p>
             </div>
           </CardItem>
-          <div class="flex justify-between items-center mt-10">
+          <div class="flex flex-wrap justify-between items-center mt-10 gap-4">
             <CardItem :translate-z="20" as="a" href="mailto:danilojakob@protonmail.com">
               <Button variant="ghost" class="text-xs font-normal dark:text-white">
                 Contact Me
               </Button>
             </CardItem>
-            <CardItem :translate-z="20" as="a" href="https://github.com/DaniloMurer" target="_blank">
-              <Button class="px-4 py-2 rounded-xl text-xs font-bold bg-black dark:bg-white dark:text-black text-white">
-                GitHub
-              </Button>
-            </CardItem>
+            <div class="flex gap-2">
+              <CardItem :translate-z="20" as="a" href="/cv_danilo_jakob.pdf" download="cv_danilo_jakob.pdf">
+                <Button variant="outline" class="px-4 py-2 rounded-xl text-xs font-bold">
+                  Download CV
+                </Button>
+              </CardItem>
+              <CardItem :translate-z="20" as="a" href="https://github.com/DaniloMurer" target="_blank">
+                <Button class="px-4 py-2 rounded-xl text-xs font-bold bg-black dark:bg-white dark:text-black text-white">
+                  GitHub
+                </Button>
+              </CardItem>
+            </div>
           </div>
         </CardBody>
       </CardContainer>

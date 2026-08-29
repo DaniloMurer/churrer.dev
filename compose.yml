@@ -6,11 +6,11 @@ services:
     labels:
       traefik.enable: true
 
-      traefik.http.routers.churrer-web.rule: Host(`churrer.dev`)
+      traefik.http.routers.churrer-web.rule: Host(`me.churrer.dev`)
       traefik.http.routers.churrer-web.entrypoints: websecure
       traefik.http.routers.churrer-web.tls: true
       traefik.http.routers.churrer-web.tls.certResolver: letencrypt
-      traefik.http.routers.churrer-web-http.rule: Host(`churrer.dev`)
+      traefik.http.routers.churrer-web-http.rule: Host(`me.churrer.dev`)
       traefik.http.routers.churrer-web-http.entrypoints: web
       traefik.http.routers.churrer-web-http.middlewares: redirect-to-https
       traefik.http.middlewares.redirect-to-https.redirectscheme.scheme: https
