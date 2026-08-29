@@ -107,7 +107,7 @@ const experience = [
     {
       title: 'churrer.dev',
       description:
-        'The source code of this very portfolio website. A modern, interactive developer profile built with Inspira UI and Nuxt 3.',
+        'The source code of this very portfolio website. A modern, interactive developer profile built with Inspira UI and Nuxt 4.',
       link: 'https://github.com/DaniloMurer/churrer.dev',
       tech: ['Vue', 'Nuxt', 'Inspira UI', 'Tailwind CSS'],
       color: 'green',
