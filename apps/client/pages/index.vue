@@ -11,6 +11,13 @@ import {Cloud, Database, ExternalLink, Github, Layout, Linkedin, Mail, Server} f
 
 const experience = [
     {
+      company: 'Future Opportunity',
+      position: 'Software Engineer',
+      timeFrame: 'Apr 2027 – Future',
+      responsibilities:
+        'Ready to jump into new challenges in wonderful Helsinki, Finland — hopefully with you! Bringing 8+ years of Java, Go, and Kubernetes expertise to the land of a thousand lakes. (Yes, I am serious about the move!)',
+    },
+    {
       company: 'Würth IT Switzerland AG',
       position: 'Software Engineer',
       timeFrame: 'Aug 2022 – Present',
@@ -172,7 +179,7 @@ const experience = [
           >
             Full-Stack Software Engineer
             <span class="block text-sm text-neutral-500 mt-1">
-              Chur, Switzerland · <span class="text-blue-500 font-semibold italic">Relocating to Helsinki, Finland in April 2027</span>
+              Chur, Switzerland · <span class="text-blue-500 font-semibold italic">Relocating to Helsinki, Finland in April 2027 (Hopefully with you!)</span>
             </span>
           </CardItem>
           <CardItem :translate-z="100" class="mt-6 w-full">
@@ -180,12 +187,13 @@ const experience = [
               class="h-64 w-full rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex flex-col items-center justify-center text-white text-sm px-8 text-center leading-relaxed"
             >
               <div class="mb-4 px-3 py-1 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-[10px] uppercase tracking-widest font-bold">
-                Relocation Goal: Helsinki 2027
+                Relocation Goal: Helsinki 2027 🇫🇮
               </div>
               <p>
                 8 years of experience building cloud-native enterprise applications. Specialized in
                 Java, Go, and Kotlin backends, Kubernetes/OpenShift DevOps, and modern TypeScript
-                frontends. Passionate about improving developer workflows and building robust systems.
+                frontends. Passionate about improving developer workflows, building robust systems,
+                and apparently, moving to Finland.
               </p>
             </div>
           </CardItem>
@@ -310,9 +318,18 @@ const experience = [
           :items="timelineItems"
         >
           <template v-for="(exp, idx) in experience" :key="idx" #[`exp-${idx}`]>
-            <div class="relative w-full pb-2">
+            <div
+              class="relative w-full pb-2"
+              :class="{ 'opacity-80 italic': exp.company === 'Future Opportunity' }"
+            >
               <h3 class="text-2xl font-bold text-neutral-800 dark:text-white">
                 {{ (exp as any).position }}
+                <span
+                  v-if="exp.company === 'Future Opportunity'"
+                  class="ml-2 text-sm font-normal not-italic px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-500 border border-blue-500/30"
+                >
+                  Future
+                </span>
               </h3>
               <p class="text-neutral-500 dark:text-neutral-400 font-medium mb-4">
                 {{ (exp as any).company }}
@@ -497,7 +514,7 @@ const experience = [
             </h3>
             <p class="text-sm">Chur, Graubünden, CH</p>
             <p class="text-xs text-neutral-500 mt-1 italic">
-              Relocating to Helsinki, FI in April 2027
+              Relocating to Helsinki, FI in April 2027 — See you there?
             </p>
           </div>
         </div>
