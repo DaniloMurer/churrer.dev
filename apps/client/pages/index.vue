@@ -107,7 +107,7 @@ const experience = [
     {
       title: 'churrer.dev',
       description:
-        'The source code of this very portfolio website. A modern, interactive developer profile built with Inspira UI and Nuxt 3.',
+        'The source code of this very portfolio website. A modern, interactive developer profile built with Inspira UI and Nuxt 4.',
       link: 'https://github.com/DaniloMurer/churrer.dev',
       tech: ['Vue', 'Nuxt', 'Inspira UI', 'Tailwind CSS'],
       color: 'green',
@@ -117,8 +117,8 @@ const experience = [
   useSeoMeta({
     title: 'Danilo Jakob - Full-Stack Software Engineer',
     ogTitle: 'Danilo Jakob - Full-Stack Software Engineer',
-    description: 'Software Engineer at Würth IT Switzerland AG, specializing in Java, Go, and DevOps. Relocating to Helsinki, Finland in April 2027.',
-    ogDescription: 'Software Engineer at Würth IT Switzerland AG, specializing in Java, Go, and DevOps. Relocating to Helsinki, Finland in April 2027.',
+    description: 'Software Engineer at Würth IT Switzerland AG, specializing in Java, Go, and DevOps. Relocating to Helsinki, Finland in May 2027.',
+    ogDescription: 'Software Engineer at Würth IT Switzerland AG, specializing in Java, Go, and DevOps. Relocating to Helsinki, Finland in May 2027.',
     twitterCard: 'summary_large_image',
   });
 
@@ -145,7 +145,7 @@ const experience = [
             'https://github.com/DaniloMurer',
             'https://linkedin.com/in/danilojakob', // Assuming standard LinkedIn URL
           ],
-          description: 'Software Engineer specializing in Java, Go, and Kubernetes. Relocating to Helsinki, Finland in April 2027.',
+          description: 'Software Engineer specializing in Java, Go, and Kubernetes. Relocating to Helsinki, Finland in May 2027.',
         }),
       },
     ],
@@ -179,7 +179,7 @@ const experience = [
           >
             Full-Stack Software Engineer
             <span class="block text-sm text-neutral-500 mt-1">
-              Chur, Switzerland · <span class="text-blue-500 font-semibold italic">Relocating to Helsinki, Finland in April 2027 (Hopefully with you!)</span>
+              Chur, Switzerland · <span class="text-blue-500 font-semibold italic">Relocating to Helsinki, Finland in May 2027 (Hopefully with you!)</span>
             </span>
           </CardItem>
           <CardItem :translate-z="100" class="mt-6 w-full">
@@ -187,7 +187,7 @@ const experience = [
               class="h-auto min-h-64 w-full rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex flex-col items-center justify-center text-white text-sm px-4 py-8 sm:px-8 text-center leading-relaxed"
             >
               <div class="mb-4 px-3 py-1 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-[10px] uppercase tracking-widest font-bold">
-                Relocation Goal: Helsinki 2027 🇫🇮
+                Relocation Goal: Helsinki 2027
               </div>
               <p>
                 8 years of experience building cloud-native enterprise applications. Specialized in
@@ -514,7 +514,7 @@ const experience = [
             </h3>
             <p class="text-sm">Chur, Graubünden, CH</p>
             <p class="text-xs text-neutral-500 mt-1 italic">
-              Relocating to Helsinki, FI in April 2027 — See you there?
+              Relocating to Helsinki, Finland in May 2027 — See you there?
             </p>
           </div>
         </div>
@@ -549,7 +549,7 @@ const experience = [
           </DockIcon>
           <DockIcon>
             <a
-              href="https://linkedin.com"
+              href="https://linkedin.com/in/danilojakob"
               target="_blank"
               class="flex size-full items-center justify-center text-foreground hover:text-blue-500 transition-colors"
             >
