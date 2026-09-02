@@ -3,20 +3,12 @@ import {BentoGrid, BentoGridItem,} from '@/components/ui/bento-grid';
 import {CardBody, CardContainer, CardItem} from '@/components/ui/card-3d';
 import {ParticlesBg} from '@/components/ui/particles-bg';
 import {Button} from '@/components/ui/button';
-import {IconCloud} from '@/components/ui/icon-cloud';
 import {Dock, DockIcon} from '@/components/ui/dock';
 import {Timeline} from '@/components/ui/timeline';
 import {BorderBeam} from '@/components/ui/border-beam';
 import {Cloud, Database, ExternalLink, Github, Layout, Linkedin, Mail, Server} from 'lucide-vue-next';
 
 const experience = [
-    {
-      company: 'Future Opportunity',
-      position: 'Software Engineer',
-      timeFrame: 'Apr 2027 – Future',
-      responsibilities:
-        'Ready to jump into new challenges in wonderful Helsinki, Finland — hopefully with you! Bringing 8+ years of Java, Go, and Kubernetes expertise to the land of a thousand lakes. (Yes, I am serious about the move!)',
-    },
     {
       company: 'Würth IT Switzerland AG',
       position: 'Software Engineer',
@@ -32,28 +24,6 @@ const experience = [
         'Completed a 4-year apprenticeship (EFZ) as a software developer, gaining foundational experience across the full software development lifecycle, including Java-based application development and early exposure to DevOps practices.',
     },
   ];
-
-  const skills = [
-    { name: 'Java', icon: 'i-simple-icons-openjdk' },
-    { name: 'Spring Boot', icon: 'i-simple-icons-springboot' },
-    { name: 'Go', icon: 'i-simple-icons-go' },
-    { name: 'Kotlin', icon: 'i-simple-icons-kotlin' },
-    { name: 'TypeScript', icon: 'i-simple-icons-typescript' },
-    { name: 'Vue', icon: 'i-simple-icons-vuedotjs' },
-    { name: 'Nuxt', icon: 'i-simple-icons-nuxt' },
-    { name: 'Kubernetes', icon: 'i-simple-icons-kubernetes' },
-    { name: 'Docker', icon: 'i-simple-icons-docker' },
-    { name: 'PostgreSQL', icon: 'i-simple-icons-postgresql' },
-    { name: 'OpenShift', icon: 'i-simple-icons-redhatopenshift' },
-    { name: 'Elasticsearch', icon: 'i-simple-icons-elasticsearch' },
-    { name: 'Jenkins', icon: 'i-simple-icons-jenkins' },
-    { name: 'ArgoCD', icon: 'i-simple-icons-argo' },
-    { name: 'GitHub', icon: 'i-simple-icons-github' },
-  ];
-
-  const skillIcons = skills.map(
-    (s) => `https://cdn.simpleicons.org/${s.icon.split('-').pop()}/white`,
-  );
 
   const timelineItems = experience.map((exp, idx) => ({
     id: `exp-${idx}`,
@@ -107,7 +77,7 @@ const experience = [
     {
       title: 'churrer.dev',
       description:
-        'The source code of this very portfolio website. A modern, interactive developer profile built with Inspira UI and Nuxt 4.',
+        'A Vue 3 / Nuxt 4 single-page application built with TypeScript and Tailwind CSS — this portfolio site itself.',
       link: 'https://github.com/DaniloMurer/churrer.dev',
       tech: ['Vue', 'Nuxt', 'Inspira UI', 'Tailwind CSS'],
       color: 'green',
@@ -179,7 +149,7 @@ const experience = [
           >
             Full-Stack Software Engineer
             <span class="block text-sm text-neutral-500 mt-1">
-              Chur, Switzerland · <span class="text-blue-500 font-semibold italic">Relocating to Helsinki, Finland in May 2027 (Hopefully with you!)</span>
+              Chur, Switzerland · <span class="text-blue-500 font-semibold italic">Relocating to Helsinki, Finland in May 2027</span>
             </span>
           </CardItem>
           <CardItem :translate-z="100" class="mt-6 w-full">
@@ -187,13 +157,13 @@ const experience = [
               class="h-auto min-h-64 w-full rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex flex-col items-center justify-center text-white text-sm px-4 py-8 sm:px-8 text-center leading-relaxed"
             >
               <div class="mb-4 px-3 py-1 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-[10px] uppercase tracking-widest font-bold">
-                Relocation Goal: Helsinki 2027
+                Relocating to Helsinki: May 2027
               </div>
               <p>
                 8 years of experience building cloud-native enterprise applications. Specialized in
                 Java, Go, and Kotlin backends, Kubernetes/OpenShift DevOps, and modern TypeScript
-                frontends. Passionate about improving developer workflows, building robust systems,
-                and apparently, moving to Finland.
+                frontends. Currently based in Switzerland and relocating to Helsinki, Finland in May
+                2027 — self-funded, no visa required as an EU citizen.
               </p>
             </div>
           </CardItem>
@@ -222,14 +192,6 @@ const experience = [
 
     <!-- Content Sections -->
     <div class="max-w-7xl mx-auto px-6 pb-20 space-y-16">
-      <!-- Skills Section -->
-      <section>
-        <h2 class="text-3xl font-bold mb-10 text-center">Tech Stack</h2>
-        <div class="relative flex size-full items-center justify-center overflow-hidden">
-          <IconCloud :images="skillIcons" />
-        </div>
-      </section>
-
       <!-- Featured Projects -->
       <section>
         <h2 class="text-3xl font-bold mb-10 text-center">Featured Projects</h2>
@@ -318,18 +280,9 @@ const experience = [
           :items="timelineItems"
         >
           <template v-for="(exp, idx) in experience" :key="idx" #[`exp-${idx}`]>
-            <div
-              class="relative w-full pb-2"
-              :class="{ 'opacity-80 italic': exp.company === 'Future Opportunity' }"
-            >
+            <div class="relative w-full pb-2">
               <h3 class="text-2xl font-bold text-neutral-800 dark:text-white">
                 {{ (exp as any).position }}
-                <span
-                  v-if="exp.company === 'Future Opportunity'"
-                  class="ml-2 text-sm font-normal not-italic px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-500 border border-blue-500/30"
-                >
-                  Future
-                </span>
               </h3>
               <p class="text-neutral-500 dark:text-neutral-400 font-medium mb-4">
                 {{ (exp as any).company }}
@@ -438,7 +391,7 @@ const experience = [
                 </p>
                 <div class="flex flex-wrap gap-2">
                   <span
-                    v-for="s in ['ABAP', 'SAP UI5', 'SAP Gateway', 'PostgreSQL', 'ELK']"
+                    v-for="s in ['ABAP', 'SAP UI5', 'SAP Gateway', 'ELK']"
                     :key="s"
                     class="px-2 py-1 rounded-md bg-yellow-500/10 text-yellow-500 text-xs font-medium border border-yellow-500/20"
                   >
@@ -514,7 +467,7 @@ const experience = [
             </h3>
             <p class="text-sm">Chur, Graubünden, CH</p>
             <p class="text-xs text-neutral-500 mt-1 italic">
-              Relocating to Helsinki, Finland in May 2027 — See you there?
+              Relocating to Helsinki, Finland in May 2027
             </p>
           </div>
         </div>

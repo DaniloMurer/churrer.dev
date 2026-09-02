@@ -1,7 +1,9 @@
 <script setup lang="ts">
   import { navigationMenuTriggerStyle } from '~/components/ui/navigation-menu';
 
-  document.documentElement.classList.add('dark');
+  useHead({
+    htmlAttrs: { class: 'dark' },
+  });
 </script>
 <template>
   <div class="size-full">

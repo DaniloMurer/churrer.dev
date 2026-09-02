@@ -8,14 +8,22 @@ export default defineNuxtConfig({
 	compatibilityDate: '2024-11-01',
 	devtools: {enabled: true},
 	telemetry: {enabled: false},
-	ssr: false,
+	ssr: true,
 	app: {
 		head: {
-			title: 'Danilo Jakob | Full-Stack Software Engineer',
+			title: 'Danilo Jakob - Full-Stack Software Engineer',
 			meta: [
 				{
 					name: 'description',
-					content: 'Portfolio of Danilo Jakob - Full-Stack Software Engineer specialized in Java, Go, and Kubernetes. Relocating to Helsinki, Finland in 2027.'
+					content: 'Software Engineer at Würth IT Switzerland AG, specializing in Java, Go, and DevOps. Relocating to Helsinki, Finland in May 2027.'
+				},
+				{
+					property: 'og:title',
+					content: 'Danilo Jakob - Full-Stack Software Engineer'
+				},
+				{
+					property: 'og:description',
+					content: 'Software Engineer at Würth IT Switzerland AG, specializing in Java, Go, and DevOps. Relocating to Helsinki, Finland in May 2027.'
 				},
 				{name: 'viewport', content: 'width=device-width, initial-scale=1'},
 				{charset: 'utf-8'}
